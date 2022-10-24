@@ -1,22 +1,46 @@
 <template>
-    <div class="bio">
-        <p>{{ candidate.name }}</p>
-        <p>Does he/she won?{{ candidate_won_election }}</p>
+
+  <div class="container">
+          <h5 v-if="$fetchState.pending">Just a monent...</h5>
+          <h5 v-else-if="$fetchState.error">Oops! Something went wrong...</h5>
+    <!-- This is the error feedback -->
+      <ul v-for="candidate in candidates" :key="candidate.id">
+          <li><span></span>
+              <div class="title">
+                <h3>{{  candidate.name  }}</h3>
+              </div>
+              
+                <div class="info">
+                <p>{{ candidate.bio }}</p>
+              </div>
+
+              <div class="type"><NuxtLink :to="'/speeches/' + candidate.id">Click to see more information</NuxtLink></div>
+
+          </li>
+      </ul>
     </div>
+
 </template>
 
 <script>
  export default {
-  async fetch({ params }) {
+   data() {
+        return {
+         candidates: [],
+        }
+   },
+
+   async fetch() {
     // This is how to fetch the API
-    const page = await fetch(`https://electionspeeches.moadoph.gov.au/api/candidates/?slug=${params.slug}`).then((res) => {
-            if (res.ok) {
-                return res.json();
-            }
-            throw new Error(res.status);
-        });
-        const analysis = page[0].body;
-        return { analysis, page };
+
+    const apiData = await fetch('https://electionspeeches.moadoph.gov.au/api/candidates.json')
+		.then((response) =>
+			response.json()
+		)
+		console.log(apiData)
+
+    this.candidates = apiData;
+
    }
   }
 </script>
