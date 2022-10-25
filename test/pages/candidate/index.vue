@@ -13,6 +13,15 @@
 
       <Candidate />
 
+      <div class="footer">
+            <div class="f-navigation">
+                <h4>Created by Jacob</h4>
+                <h5>University of Canberra</h5>
+                <p>Back to Top</p>
+            </div>
+        </div>
+        <!-- Footer -->
+
 </section>
 </template>
 

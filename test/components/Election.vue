@@ -4,6 +4,7 @@
             <h5 v-if="$fetchState.pending">Just a monent...</h5>
             <h5 v-else-if="$fetchState.error">Oops! Something went wrong...</h5>
       <!-- This is the error feedback -->
+
         <ul v-for="election in elections" :key="election.id">
             <li><span></span>
                 <div class="title">
@@ -11,11 +12,10 @@
                 </div>
                 
                   <div class="info">
-                  <p>{{ election.notes }}</p>
+                  <p class="detail">This election was start at {{ election.date }}</p>
                 </div>
 
-                <div class="type"><NuxtLink :to="'/speeches/' + election.id">Click to see more information</NuxtLink></div>
-
+                <div class="link"><NuxtLink :to="'/speeches/' + election.id">Click to see more information</NuxtLink></div>
             </li>
         </ul>
       </div>
@@ -51,10 +51,14 @@
   margin: 40px 40px;
 }
 
+/* Error text */
+
 .container h5 {
   font-size: 70px;
   color: #fff;
 }
+
+/* Timeline */
 
 .container ul {
   list-style: none;
@@ -73,6 +77,8 @@
   border: 2px dashed #aaa;
 }
 
+/* Data container */
+
 .container ul li {
   margin: 50px 60px;
   position:  relative;
@@ -82,6 +88,16 @@
   border-radius: 10px;
   margin-bottom: 20px;
 }
+
+.link a {
+  padding: 1em;
+  color: #ffffff;
+}
+.link a:hover {
+  color:#000000;
+}
+
+/* Dots between the line */
 
 .container ul li span {
   content: '';
@@ -110,6 +126,12 @@
 
 .container ul li span:after {
   top: 100%;
+}
+
+/* Seperate with v-html <P> */
+
+.info .detail {
+  margin: 0;
 }
 
 /* @media only screen and (min-width: 768px) {

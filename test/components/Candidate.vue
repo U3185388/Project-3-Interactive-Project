@@ -4,6 +4,7 @@
           <h5 v-if="$fetchState.pending">Just a monent...</h5>
           <h5 v-else-if="$fetchState.error">Oops! Something went wrong...</h5>
     <!-- This is the error feedback -->
+
       <ul v-for="candidate in candidates" :key="candidate.id">
           <li><span></span>
               <div class="title">
@@ -11,11 +12,10 @@
               </div>
               
                 <div class="info">
-                <p>{{ candidate.bio }}</p>
+                <p class="detail">{{ candidate.bio }}</p>
               </div>
 
-              <div class="type"><NuxtLink :to="'/speeches/' + candidate.id">Click to see more information</NuxtLink></div>
-
+              <div class="link"><NuxtLink :to="'/speeches/' + candidate.id">Click to see more information</NuxtLink></div>
           </li>
       </ul>
     </div>

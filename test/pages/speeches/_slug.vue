@@ -10,6 +10,7 @@
                 <NuxtLink to="/about">About this website</NuxtLink>
             </div>
         </div>
+        <!-- Header -->
 
 		<div class="content">
             <div class="info"><h2>
@@ -19,6 +20,16 @@
             </h2></div>
             <div class="p" v-html="apiData.body"></div>
         </div>
+        <!-- Body -->
+
+        <div class="footer">
+            <div class="f-navigation">
+                <h4>Created by Jacob</h4>
+                <h5>University of Canberra</h5>
+                <p>Back to Top</p>
+            </div>
+        </div>
+        <!-- Footer -->
 
 	</section>
 </template>
@@ -47,75 +58,59 @@ export default {
 
 <style>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
-section {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background-color: rgb(16, 75, 236);
-}
-
-.header {
-    position: relative;
-    top: 0;
-    width: 100%;
-    padding: 40px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(236, 185, 44);
-}
-
-.header h2 {
-    position: relative;
-    color: #000;
-    font-size: 30px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 1px;
-}
-
-.header .navigation {
-    color:#000;
-    background: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    letter-spacing: 1px;
-    padding: 2px 15px;
-    border-radius: 20px;
-}
-
-.header .navigation a:not(:last-child) {
-    margin-right: 30px;
-}
-
-.header .navigation a:hover {
-    background: #fff;
-}
-
 .content {
     margin: 60px 100px;
     background-color: rgb(240, 228, 176);
 }
 
+.content .info {
+    text-align: center;
+    margin-top: 2em;
+}
+
 .content .info h2 {
     color: #226A80;
     background-color: rgb(34, 168, 123);
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 800;
     letter-spacing: 2px;
     line-height: 60px;
     margin-bottom: 30px;
+    padding: 1em;
+}
+
+/* Fix v-html (speech body) */
+
+p {
+    margin-left: 3em;
+    margin-right: 3em;
+    padding: 1em;
+}
+
+ul {
+    margin-left: 3em;
+    padding: 1em;
+}
+
+ul li {
+    margin-bottom: 1em;
+    list-style-type: none;
+}
+
+ol {
+    margin-left: 3em;
+    padding: 1em;
+}
+
+ol li {
+    margin-bottom: 1em;
+    list-style-type: none;
+}
+
+h2 {
+    margin-left: 2em;
+    margin-right: 3em;
+    padding: 1em;
 }
     
 </style>
