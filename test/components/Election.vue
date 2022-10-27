@@ -1,6 +1,49 @@
 <template>
 
     <div class="container">
+
+      <ul>
+            <li><span></span>
+                <div class="title">
+                  <h3>1901</h3>
+                </div>
+                
+                  <div class="info">
+                  <p class="detail">This election was start at 1901-03-29</p>
+                </div>
+
+                <div class="link"><NuxtLink :to="'/speeches/' + 51">Click to see more information</NuxtLink></div>
+            </li>
+          </ul>
+
+          <ul>
+            <li><span></span>
+                <div class="title">
+                  <h3>1903</h3>
+                </div>
+                
+                  <div class="info">
+                  <p class="detail">This election was start at 1903-12-16</p>
+                </div>
+
+                <div class="link"><NuxtLink :to="'/speeches/' + 59">Click to see more information</NuxtLink></div>
+            </li>
+          </ul>
+
+          <ul>
+            <li><span></span>
+                <div class="title">
+                  <h3>1906</h3>
+                </div>
+                
+                  <div class="info">
+                  <p class="detail">This election was start at 1906-12-12</p>
+                </div>
+
+                <div class="link"><NuxtLink :to="'/speeches/' + 42">Click to see more information</NuxtLink></div>
+            </li>
+        </ul>
+      
             <h5 v-if="$fetchState.pending">Just a monent...</h5>
             <h5 v-else-if="$fetchState.error">Oops! Something went wrong...</h5>
       <!-- This is the error feedback -->
@@ -15,7 +58,7 @@
                   <p class="detail">This election was start at {{ election.date }}</p>
                 </div>
 
-                <div class="link"><NuxtLink :to="'/speeches/' + election.id">Click to see more information</NuxtLink></div>
+                <div class="link"><NuxtLink :to="'/speeches/' + election.id">Click to see different information</NuxtLink></div>
             </li>
         </ul>
       </div>
@@ -120,6 +163,10 @@
   background: #fff;
 }
 
+.container ul li span:before:hover, .container ul li span:after:hover {
+  background:#eb2121;
+}
+
 .container ul li span:before {
   top: -10px;
 }
@@ -134,57 +181,39 @@
   margin: 0;
 }
 
-/* @media only screen and (min-width: 768px) {
-  .timeline:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 100%;
-    background-color: gray;
-  }
-  .timeline ul li {
-    width: 50%;
-    position: relative;
-    margin-bottom: 50px;
-  }
-  .timeline ul li:nth-child(odd) {
-    float: left;
-    clear: right;
-    transform: translateX(-30px);
-    border-radius: 20px 0px 20px 20px;
-  }
-  .timeline ul li:nth-child(even) {
-    float: right;
-    clear: left;
-    transform: translateX(30px);
-    border-radius: 0px 20px 20px 20px;
-  }
-  .timeline ul li::before {
-    content: "";
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    background-color: gray;
-    top: 0px;
-  }
-  .timeline ul li:nth-child(odd)::before {
-    transform: translate(50%, -50%);
-    right: -30px;
-  }
-  .timeline ul li:nth-child(even)::before {
-    transform: translate(-50%, -50%);
-    left: -30px;
-  }
-  .timeline-content .date {
-    position: absolute;
-    top: -30px;
-  }
-  .timeline ul li:hover::before {
-    background-color: aqua;
-  }
-} */
+/* Reponsive */
+@media (min-width:640px) and (max-width: 1024px) {
+
+.container h5 {
+  font-size: 50px;
+  color: #fff;
+}
+
+.info {
+  font-size: 5px;
+}
+
+.link a {
+  padding: 0em;
+}
+
+}
+
+@media (max-width: 639px) {
+
+.container h5 {
+  font-size: 40px;
+  color: #fff;
+}
+
+.info {
+  display: none;
+}
+
+.link a {
+  padding: 0em;
+}
+
+}
+
 </style>

@@ -13,13 +13,16 @@
     <!-- header -->
       <Election />
 
-      <div class="footer">
-            <div class="f-navigation">
-                <h4>Created by Jacob</h4>
-                <h5>University of Canberra</h5>
-                <p>Back to Top</p>
-            </div>
-      </div>
+      <footer class="distributed">
+
+          <div class="left">
+              <h3>Created by Jacob</h3>
+          </div>
+
+          <div class="middle">
+              <p>@University of Canberra</p>
+          </div>
+        </footer>
       <!-- Footer -->
 
   </section>
@@ -90,7 +93,6 @@ section {
 .header .navigation {
     color:#000;
     background: #fff;
-    
     font-weight: 500;
     letter-spacing: 1px;
     padding: 4px 40px;
@@ -100,8 +102,13 @@ section {
 a {
   text-decoration: none;
 }
+
 .header .navigation a {
-  color: red;
+  color: rgb(8, 113, 199);
+}
+
+.header .navigation a:hover {
+  color: rgb(28, 241, 213);
 }
 
 
@@ -116,14 +123,76 @@ a {
 
 /* Footer CSS */
 
-.footer {
-    position: relative;
-    top: 0;
+footer {
+    text-align: center;
+    padding-top: 100px;
+    font-size: 35px;
+    bottom: 0;
+}
+
+.distributed {
+    background-color: #2d2a30;
+    box-sizing: border-box;
     width: 100%;
-    padding: 15px 150px;
-    display: flex;
-    align-items: center;
-    background-color: rgb(236, 185, 44);
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 50px 50px 60px 50px;
+    margin-top: 80px;
+}
+
+.distributed .left, .distributed .middle {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Left */
+
+.distributed .left {
+    width: 30%;
+}
+
+.distributed h3 {
+    color: #ffffff;
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
+}
+
+/* Middle */
+
+.distributed .middle {
+    width: 35%;
+}
+
+.distributed .middle p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+}
+
+/* Reponsive */
+@media (min-width:640px) and (max-width: 1024px) {
+
+.header h2 {
+  display: none;
+}
+
+.header .navigation{
+  margin: center;
+}
+}
+
+@media (max-width: 639px) {
+
+.header h2 {
+  display: none;
+}
+
+.header .navigation{
+  margin: center;
+  font-size: 5px;
+}
+
 }
 
 </style>
