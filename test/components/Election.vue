@@ -185,12 +185,12 @@
 @media (min-width:640px) and (max-width: 1024px) {
 
 .container h5 {
-  font-size: 50px;
+  font-size: 3em;
   color: #fff;
 }
 
 .info {
-  font-size: 5px;
+  font-size: 0.5em;
 }
 
 .link a {
@@ -202,7 +202,7 @@
 @media (max-width: 639px) {
 
 .container h5 {
-  font-size: 40px;
+  font-size: 2em;
   color: #fff;
 }
 

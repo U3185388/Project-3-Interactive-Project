@@ -178,7 +178,8 @@ footer {
 }
 
 .header .navigation{
-  margin: center;
+  padding: 4px 4em;
+  text-align: center;
 }
 }
 
@@ -189,8 +190,8 @@ footer {
 }
 
 .header .navigation{
-  margin: center;
-  font-size: 5px;
+  text-align: center;
+  font-size: 0.3em;
 }
 
 }

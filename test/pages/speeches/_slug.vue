@@ -13,7 +13,7 @@
         <!-- Header -->
 
 		<div class="content">
-            <div class="info"><h2>
+            <div class="info"><h2 class="message">
                 {{ apiData.title }}
                 {{ apiData.location }}
                 {{ apiData.analysis.num_words }}
@@ -70,7 +70,7 @@ export default {
     margin-top: 2em;
 }
 
-.content .info h2 {
+.content .info .message {
     color: #226A80;
     background-color: rgb(34, 168, 123);
     font-size: 32px;
@@ -114,5 +114,32 @@ h2 {
     margin-right: 3em;
     padding: 1em;
 }
-    
+
+/* Reponsive */
+@media (min-width:640px) and (max-width: 1024px) {
+
+.content .info .message {
+    font-size: 2em;
+    letter-spacing: 1px;
+    line-height: 1em;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+}
+
+@media (max-width: 639px) {
+
+.content .info {
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+.content .info .message {
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+}
+
 </style>
