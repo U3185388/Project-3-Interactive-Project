@@ -24,9 +24,9 @@
                     <br>Click to enter the slug page, the page will display the time, location and word number of the speech; Followed by the speech that the elector brought at that time
                     <br>Here is the APIs:
                     <br><ul>
-                        <li><a href="https://electionspeeches.moadoph.gov.au/api/elections.json">https://electionspeeches.moadoph.gov.au/api/elections.json</a></li>
-                        <li><a href="https://electionspeeches.moadoph.gov.au/api/candidates.json">https://electionspeeches.moadoph.gov.au/api/candidates.json</a></li>
-                        <li><a href="https://electionspeeches.moadoph.gov.au/api/speeches.json">https://electionspeeches.moadoph.gov.au/api/speeches.json</a></li>
+                        <li><a href="https://electionspeeches.moadoph.gov.au/api/elections.json">https:<wbr>//electionspeeches<wbr>.moadoph<wbr>.gov<wbr>.au<wbr>/api<wbr>/elections<wbr>.json</a></li>
+                        <li><a href="https://electionspeeches.moadoph.gov.au/api/candidates.json">https:<wbr>//electionspeeches<wbr>.moadoph<wbr>.gov<wbr>.au<wbr>/api<wbr>/candidates<wbr>.json</a></li>
+                        <li><a href="https://electionspeeches.moadoph.gov.au/api/speeches.json">https:<wbr>//electionspeeches<wbr>.moadoph<wbr>.gov<wbr>.au<wbr>/api<wbr>/speeches<wbr>.json</a></li>
                     </ul>
                 </p>
             </div>
@@ -91,4 +91,23 @@ ul li {
     margin-bottom: 1em;
     list-style-type: none;
 }
+
+/* Reponsive */
+@media (min-width:640px) and (max-width: 1024px) {
+    ul {
+    margin-left: -1em;
+
+}
+
+}
+
+@media (max-width: 639px) {
+
+    ul {
+    margin-left: -1em;
+
+}
+
+}
+
 </style>
